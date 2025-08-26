@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin PDF Upload</title>
+  <link rel="stylesheet" href="/assets/css/notes.css">
+  <style>
+    .admin-container {
+      max-width: 500px;
+      margin: 3rem auto;
+      background: var(--background-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+      padding: 2rem 2.5rem 2.5rem 2.5rem;
+      color: var(--text-primary);
+    }
+    .admin-container h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .admin-form label {
+      display: block;
+      margin-top: 1.2rem;
+      margin-bottom: 0.5rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+    .admin-form input, .admin-form select {
+      width: 100%;
+      padding: 0.7rem 1rem;
+      border-radius: 8px;
+      border: 1.5px solid var(--border-color);
+      background: var(--input-bg);
+      color: var(--text-primary);
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      transition: border-color 0.2s;
+    }
+    .admin-form input:focus, .admin-form select:focus {
+      border-color: var(--primary-color);
+      outline: none;
+    }
+    .admin-form button {
+      margin-top: 1.5rem;
+      width: 100%;
+      padding: 0.9rem;
+      background: var(--primary-color);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .admin-form button:hover {
+      background: var(--primary-hover);
+      color: #000;
+    }
+    #result {
+      margin-top: 1.2rem;
+      text-align: center;
+      font-weight: 500;
+      min-height: 1.5em;
+    }
+    .success { color: var(--success-color); }
+    .error { color: var(--error-color); }
+    .materials-list {
+      margin-top: 2.5rem;
+      background: var(--background-hover);
+      border-radius: 10px;
+      padding: 1.2rem 1rem;
+    }
+    .materials-list h2 {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      color: var(--primary-color);
+    }
+    .material-item {
+      margin-bottom: 0.7rem;
+      padding-bottom: 0.7rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .material-item:last-child { border-bottom: none; }
+    .material-title { font-weight: 600; }
+    .material-desc { color: var(--text-secondary); font-size: 0.97em; }
+    .material-date { color: var(--text-tertiary); font-size: 0.92em; }
+    .material-link { color: var(--primary-color); text-decoration: underline; font-size: 0.97em; }
+  </style>
+</head>
+<body>
+  <div class="admin-container">
+    <h1>Admin PDF Upload</h1>
+    <form id="uploadForm" class="admin-form" enctype="multipart/form-data" method="POST" action="/api/admin/upload">
+      <label for="semester">Semester:</label>
+      <select id="semester" name="semester" required></select>
+      <label for="branch">Branch:</label>
+      <select id="branch" name="branch" required></select>
+      <label for="subject">Subject:</label>
+      <select id="subject" name="subject" required></select>
+      <label for="title">Title:</label>
+      <input type="text" id="title" name="title" required>
+      <label for="description">Description:</label>
+      <input type="text" id="description" name="description" required>
+      <label for="pdf">PDF File:</label>
+      <input type="file" id="pdf" name="pdf" accept="application/pdf" required>
+      <button type="submit">Upload</button>
+    </form>
+    <div id="result"></div>
+    <div class="materials-list" id="materialsList">
+      <h2>Latest Materials for Selected Subject</h2>
+      <div id="materials"></div>
+    </div>
+    <a href="notes.html" style="display:block;text-align:center;margin-top:2rem;color:var(--primary-color);">&larr; Back to Notes</a>
+  </div>
+  <script src="/assets/js/pages/admin.js"></script>
+</body>
+</html> 
