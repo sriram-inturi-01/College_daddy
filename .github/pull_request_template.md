@@ -1,20 +1,19 @@
-## 🧾 Pull Request Summary
-Describe clearly what this PR does and why it’s needed. Mention any relevant issues.
-
-**Related Issue:** Fixes # (issue number)
-
----
-
-## 💡 Changes Introduced
-List the major updates in this PR:
-- 
-- 
-- 
+## Pull Request Summary
+Briefly describe what this PR accomplishes and why it’s needed.  
+Reference any related issues (e.g., `Fixes #12`).
 
 ---
 
-## 🖼️ Screenshots / Demo
-Add before-and-after screenshots or a short screen recording (required for UI changes).
+## Changes Introduced
+List the key changes made in this PR:
+- 
+- 
+- 
+
+---
+
+## Screenshots / Demo (for UI changes)
+If applicable, include before-and-after visuals to illustrate the impact.
 
 | Before | After |
 |:-------:|:------:|
@@ -22,18 +21,15 @@ Add before-and-after screenshots or a short screen recording (required for UI ch
 
 ---
 
+## Checklist
+Please ensure the following before requesting review:
+- [ ] Code follows project conventions and best practices.  
+- [ ] Feature or fix works correctly on both mobile and desktop.  
+- [ ] No new console errors or accessibility regressions.  
+- [ ] Documentation updated if applicable.  
+- [ ] Visuals attached for UI-related updates.  
 
 ---
 
-## ✅ Checklist
-Please verify all boxes before requesting review:
-- [ ] My code follows the project’s style guidelines.
-- [ ] I’ve tested the feature thoroughly on mobile and desktop.
-- [ ] No new console errors or accessibility issues introduced.
-- [ ] Documentation (if required) is updated.
-- [ ] Screenshots or visuals are attached for UI work.
-
----
-
-### ⚙️ Additional Notes
-Include any extra context or future improvements here.
+## Additional Notes
+Add any relevant context, design considerations, or follow-up tasks here.
